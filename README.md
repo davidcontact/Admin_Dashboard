@@ -1,6 +1,6 @@
 # My Awesome Project
 
-# This project is an example of how to create a simple web application using React Js / Router / tool: Vite.
+# This project is an example of how to create a web full stack application using html css javascript php and MySQL / Tool: Font awesome, Chart.js
 
 Installation To run this project locally, follow these steps:
 Clone the repository: git clone https://github.com/davidcontact/Admin_Dashboard.git
@@ -14,7 +14,7 @@ Once the project is set up, you can use it to:
 
 3. Secure Login/Register with admin page and user page
 
-4. Using tool Chart js for analysts
+4. tool Using Chart js for analysts
 
 5. user login/Register TIME DATE
 6. 
