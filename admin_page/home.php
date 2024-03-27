@@ -4,9 +4,9 @@ include("../connect/connect.php");
 $conn = connect();
 // check if they log in they can use is they not it will auto switch to login page
 session_start();
-$check = $_SESSION['Login'];
-if ($check != 1) {
+if ($_SESSION['Email'] != true) {
     header("location: ../Form/login.php");
+} else {
 }
 ?>
 <!DOCTYPE html>
@@ -81,7 +81,7 @@ if ($check != 1) {
         }
 
         .main .dashboard .sidebar li .nav-item:hover {
-            background-color: rgb(46,46,46);
+            background-color: rgb(46, 46, 46);
             margin-left: 10px;
             transition: all 0.3s ease;
         }

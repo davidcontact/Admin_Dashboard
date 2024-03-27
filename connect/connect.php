@@ -3,7 +3,7 @@ function connect()
 {
     $db_host = "localhost";
     $db_user = "root";
-    $db_password = "";
+    $db_password = "David012@";
     $db_db = "db_employee";
 
     $mysql = @new mysqli(

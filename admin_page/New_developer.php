@@ -3,9 +3,9 @@ include("main.php");
 include("../connect/connect.php");
 // check if they log in they can use is they not it will auto switch to login page
 session_start();
-$check = $_SESSION['Login'];
-if ($check != 1) {
+if ($_SESSION['Email'] != true) {
     header("location: ../Form/login.php");
+} else {
 }
 
 ?>

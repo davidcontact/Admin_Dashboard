@@ -4,13 +4,13 @@ include("../connect/connect.php");
 $conn = connect();
 // check if they log in they can use is they not it will auto switch to login page
 session_start();
-$check = $_SESSION['Login'];
-if ($check != 1) {
+if ($_SESSION['User'] != true) {
     header("location: ../Form/login.php");
+} else {
 }
 
 ?>
-
+<!-- <a href="userPage.php"></a> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,7 +86,14 @@ if ($check != 1) {
 <body>
     <div class="container">
         <header>
-            <h4>User Page</h4>
+            <?php
+            $email = $_SESSION["User"];
+            $sql = "select * from db_employee.login_table where user_name = '$email'";
+            $result = $conn->query($sql);
+            $row = mysqli_fetch_assoc($result);
+            $user = $row["user_name"];
+            ?>
+            <h4><?php echo $user ?></h4>
             <a href="logout.php">Log Out</a>
         </header>
         <div class="section">
